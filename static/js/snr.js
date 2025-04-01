@@ -1,13 +1,16 @@
 const inputBox = document.querySelector("input");
+const chatWindow = document.querySelector(".chat-window");
 
 inputBox.addEventListener("change", chatWithAI);
 
 let conversation = []
 
-function  chatWithAI(){
+function chatWithAI(){
     let userChatMsg = inputBox.value;
     const userChatBubble = document.createElement("div");
-
+    userChatBubble.className = "chat-bubble user-bubble";
+    userChatBubble.textContent = userChatMsg;
+    chatWindow.appendChild(userChatBubble);
 
     fetch("chat-with-ai", {
         method: "POST",
@@ -19,6 +22,12 @@ function  chatWithAI(){
     })
     .then(aiJson => aiJson.json())
     .then(aiObj => {
-        
+        const aiChatBubble = document.createElement("div");
+        aiChatBubble.className = "chat-bubble ai-bubble";
+        aiChatBubble.textContent = aiObj.ai_msg;
+        chatWindow.appendChild(aiChatBubble);
+        conversation = aiObj.conversation;
     })
+    .catch(error => console.log("Error: ", error))
+    inputBox.value="";``
 }
