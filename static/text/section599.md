@@ -717,7 +717,7 @@ If the Injectable Psychotropic Medication Administration with Monitoring and Edu
 ### **(e)**
 
 Modifiers. Billing modifiers, including modifiers paid as supplementary rates to visits, are available pursuant to this section as indicated in the modifier chart included in this subdivision.
-(chart)
+
 Modifier Chart for Services Provided On-Site
 Office of Mental Health Service Name | After Hours | Language other than English | Physician/NPP
 Complex Care Management | x | x | |
@@ -736,7 +736,6 @@ Individual Psychotherapy - extended | x | x | x |
 Group and Multifamily/Collateral Group Psychotherapy | x | x | x |
 Family Therapy/Collateral w/o patient | x | x | x |
 Family Therapy/Collateral with patient | x | x | x |
-(chart)
 
 ### **(f)**
 
