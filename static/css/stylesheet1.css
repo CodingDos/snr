@@ -8,69 +8,52 @@ body {
     flex-direction: column;
     align-items: center;
 }
-
-header {
-    background-color: #202123;
-    color: #ffffff;
+.container {
+    background-color: #ffffff;
+    color: #9aa2a6;
     padding: 20px;
     width: 100%;
     text-align: center;
     font-size: 24px;
     border-bottom: 1px solid #444654;
 }
-
-.profile-card {
-    background: #40414f;
-    padding: 20px;
-    margin: 20px auto;
-    width: 50%;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-    border-radius: 10px;
-    text-align: center;
+.chat-container {
+    grid-area: chatbox;
 }
-
-.profile-card img {
-    width: 100px;
-    border-radius: 50%;
+input {
+    padding: 5px 10px;
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
+    border: 1px solid lightgray;
+    margin-right: -10px;
+    width: 225px;
+    font-size: 16px;
 }
-
-section {
-    margin: 20px auto;
-    padding: 20px;
-    width: 60%;
-    background: #40414f;
-    border-radius: 10px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-}
-
-.connect-button {
+button {
     display: inline-block;
     padding: 10px 20px;
-    background-color: #10a37f;
+    background-color: #1e6ed5;
     color: white;
     text-decoration: none;
     border-radius: 5px;
     margin-top: 20px;
     font-weight: bold;
 }
-
-.connect-button:hover {
+button:hover {
     background-color: #0e8468;
 }
-
-h2 {
-    margin-top: 1px;
-    text-align: center;
-
+.chat-window {
+    border: 2px solid lightgray;
+    border-radius: 10px;
+    padding: 5px;
+    margin-top: 15px;
+    height: 350px;
+    border-top-right-radius: 0px;
+    border-top-left-radius: 0px;
+    overflow-y: auto; /* make scroll bar if needed */
 }
-
-.chat-input {
-    margin-bottom: 10px;
-    text-align: center;
-}
-
 .chat-bubble {
-    border: 1px solid #000000;
+    border: 1px solid lightgray;
     padding: 5px 10px;
     margin: 5px;
     border-radius: 10px;
@@ -80,8 +63,7 @@ h2 {
 }
 
 .user-bubble {
-    background-color: lightgray;
-    color: #000000;
+    background-color: #eff;
     margin-left: auto;
     margin-right: 0;
     border-top-right-radius: 0;
@@ -89,8 +71,7 @@ h2 {
 }
 
 .ai-bubble {
-    background-color: #ffffff;
-    color: #000000;
+    background-color: #efe;
     margin-right: auto;
     margin-left: 0;
     border-top-left-radius: 0;
