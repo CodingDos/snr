@@ -11,6 +11,7 @@ function chatWithAI() {
   userChatBubble.className = "chat-bubble user-bubble";
   userChatBubble.textContent = userChatMsg;
   chatWindow.appendChild(userChatBubble);
+  chatWindow.scrollTop = chatWindow.scrollHeight;
 
   fetch("chat-with-ai", {
     method: "POST",
