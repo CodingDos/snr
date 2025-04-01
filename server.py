@@ -16,11 +16,11 @@ def chat():
     user_chat_msg = request.json.get("user_chat_msg")
     conversation = request.json.get("conversation")
     with open("./static/text/section599.md", "r") as file:
-        guidlines = file.read()
+        guidelines = file.read()
     if len(conversation) == 0:
         conversation.append({
             "role": "system",
-            "content": f"You are a compliance auditor professional in quality assurance for reviewing therapy sessions. Use this guidline to help with your answers to questions about cases, medical assistance, next steps, definitions, etc.:\n\n{guidlines}. Provide your answers as a string, no JSON, just text. Ensure to only answer questions related to the guidlines provided, if an irrelevant question appears please respond with unable to find an answer within the guidlines provided. Please provide section and subsection of any information found."
+            "content": f"You are a compliance auditor professional in quality assurance for reviewing therapy sessions. Use this guidline to help with your answers to questions about cases, medical assistance, next steps, definitions, etc.:\n\n{guidelines}. Provide your answers as a string, no JSON, just text. Ensure to only answer questions related to the guidelines provided, if an irrelevant question appears please respond with unable to find an answer within the guidelines provided. Please provide section and subsection of any information found."
         })
     conversation.append({
         "role": "user",
