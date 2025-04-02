@@ -1,32 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link href="../static/css/stylesheet2.css" rel="stylesheet">
-</head>
-<body>
+    <link href="../static/css/stylesheet2.css" rel="stylesheet" />
+  </head>
+  <body>
     <div class="container">
-        <h1> Client Blank Database </h1>
+      <h1>A.I Assistant for Compliance Auditing</h1>
+      <!-- need to add all folder and md files related. this is to avoid having nested nav bars -->
+      <p>Please Select a Program</p>
+      <select class="nav_selector">
+        <option value="mhotrs/section599.md">MHOTRS</option>
+        <option value=""></option>
+      </select>
 
-        <section class="chat-container">
-
-            <h2>Database Search</h2>
-            <div class="chat-window">
-
-            </div>
-
-            <div class="chat-input">
-                <input type="search" placeholder="Ask a question...">
-                <button>Send</button>
-            </div>
-
-        </section>
-
-
+      <section class="chat-container">
+        <div class="chat-window"></div>
+        <div class="chat-input">
+          <input type="search" placeholder="Ask a question..." />
+          <button>Send</button>
+        </div>
+      </section>
     </div>
 
     <script src="../static/js/snr.js"></script>
-</body>
+  </body>
 </html>

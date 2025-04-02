@@ -1,11 +1,13 @@
 const inputBox = document.querySelector("input");
 const chatWindow = document.querySelector(".chat-window");
+const mdFile = document.querySelector(".nav-selector");
 
 inputBox.addEventListener("change", chatWithAI);
 
 let conversation = [];
 
 function chatWithAI() {
+  let mdFileSelected = mdFile.value;
   let userChatMsg = inputBox.value;
   const userChatBubble = document.createElement("div");
   userChatBubble.className = "chat-bubble user-bubble";
@@ -19,6 +21,7 @@ function chatWithAI() {
     body: JSON.stringify({
       user_chat_msg: userChatMsg,
       conversation: conversation,
+      md_file: mdFileSelected,
     }),
   })
     .then((aiJson) => aiJson.json())

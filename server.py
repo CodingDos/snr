@@ -14,23 +14,24 @@ def index():
 @app.route("/chat-with-ai", methods=["POST"])
 def chat():
     user_chat_msg = request.json.get("user_chat_msg")
+    md_file = request.json.get("md_file")
     conversation = request.json.get("conversation")
-    with open("./static/text/section599.md", "r") as file:
+    md_file_path = os.path.join("./static/text/", md_file)
+    with open(md_file_path, "r") as file:
         guidelines = file.read()
     if len(conversation) == 0:
         conversation.append({
             "role": "system",
             "content": f"""You are a compliance auditor professional in quality assurance for reviewing therapy sessions. Use this guideline to help with your answers to questions about cases, medical assistance, next steps, definitions, etc.:\n\n{guidelines}. 
 
-            Provide your responses as a string, no JSON, just plain text. Ensure that all information incorporated from the guidelines is presented in quotes or in <code>code blocks</code>. After each quote or code block, include a reference to the title and the specific section and subsection where the information was found in the format:
+            Provide your responses as a string, no JSON, just plain text. Ensure that all information incorporated from the guidelines is presented in quotes. After each quote, include a reference to the title and the specific section and subsection where the information was found in the format:
 
-            <code> Reference: [Title], [Section Number], [Subsection Number or Title] </code>
+            <code><i> Reference: [Title], [Section Number], [Subsection Number] </i></code>
 
             Ensure your responses are structured as follows:
             1. If you find relevant information directly from the guidelines, quote it. Then decide if any words are important and wrap them in <b></b>.
             2. After quoting, on the next line follow with the reference in the format mentioned above.
             3. Any explanation, simplification, or advice in your own words should follow after the quote, not in quotes.
-            4. Include a </br> at the end of every line.
             5. If a question or request falls outside the scope of the guidelines, respond with: "Unable to find an answer within the guidelines provided."
             6. Please ensure all responses are clear, concise, and relevant to the information in the guidelines provided, and maintain proper structure in your responses."""
         })
@@ -41,7 +42,6 @@ def chat():
 
     ai_msg = send_convo_to_ai(conversation)
     print("ai_msg", ai_msg)
-    ai_msg = send_convo_to_ai(conversation)
     
     ai_msg = ai_msg.replace("\n", "<br>")
 

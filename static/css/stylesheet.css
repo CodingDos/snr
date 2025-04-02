@@ -1,98 +1,107 @@
 body {
-    font-family: "Inter", sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #343541;
-    color: #d1d5db;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  font-family: "Inter", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #343541;
+  color: #d1d5db;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 header {
-    background-color: #202123;
-    color: #ffffff;
-    padding: 20px;
-    width: 100%;
-    text-align: center;
-    font-size: 24px;
-    border-bottom: 1px solid #444654;
+  background-color: #202123;
+  color: #ffffff;
+  padding: 20px;
+  width: 100%;
+  text-align: center;
+  font-size: 24px;
+  border-bottom: 1px solid #444654;
 }
 
 .profile-card {
-    background: #40414f;
-    padding: 20px;
-    margin: 20px auto;
-    width: 50%;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-    border-radius: 10px;
-    text-align: center;
+  background: #40414f;
+  padding: 20px;
+  margin: 20px auto;
+  width: 50%;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  text-align: center;
 }
 
 .profile-card img {
-    width: 100px;
-    border-radius: 50%;
+  width: 100px;
+  border-radius: 50%;
 }
 
 section {
-    margin: 20px auto;
-    padding: 20px;
-    width: 60%;
-    background: #40414f;
-    border-radius: 10px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  margin: 20px auto;
+  padding: 20px;
+  width: 60%;
+  background: #40414f;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
 }
 
 .connect-button {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #10a37f;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-    margin-top: 20px;
-    font-weight: bold;
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #10a37f;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-top: 20px;
+  font-weight: bold;
 }
 
 .connect-button:hover {
-    background-color: #0e8468;
+  background-color: #0e8468;
 }
 
 h2 {
-    margin-top: 1px;
-    text-align: center;
-
+  margin-top: 1px;
+  text-align: center;
 }
 
 .chat-input {
-    margin-bottom: 10px;
-    text-align: center;
+  margin-bottom: 10px;
+  text-align: center;
 }
 
 .chat-bubble {
-    border: 1px solid #000000;
-    padding: 5px 10px;
-    margin: 5px;
-    border-radius: 10px;
-    width: 80%;
-    font-size: 14px;
-    line-height: 18px;
+  border: 1px solid #000000;
+  padding: 5px 10px;
+  margin: 5px;
+  border-radius: 10px;
+  width: 80%;
+  font-size: 14px;
+  line-height: 18px;
 }
 
 .user-bubble {
-    background-color: lightgray;
-    color: #000000;
-    margin-left: auto;
-    margin-right: 0;
-    border-top-right-radius: 0;
-    border-bottom-right-radius: 0;
+  background-color: lightgray;
+  color: #000000;
+  margin-left: auto;
+  margin-right: 0;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
 }
 
 .ai-bubble {
-    background-color: #ffffff;
-    color: #000000;
-    margin-right: auto;
-    margin-left: 0;
-    border-top-left-radius: 0;
-    border-bottom-left-radius: 0;
+  background-color: #ffffff;
+  color: #000000;
+  margin-right: auto;
+  margin-left: 0;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+code {
+  background: #f7f7f7;
+  border-radius: 0.35em;
+  border: solid 2px #efefef;
+  font-family: "Courier New", monospace;
+  font-size: 0.9em;
+  margin: 0 0.25em;
+  padding: 0.25em 0.65em;
 }
