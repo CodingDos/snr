@@ -2,7 +2,7 @@ const inputBox = document.querySelector("input");
 const chatWindow = document.querySelector(".chat-window");
 const mdFile = document.querySelector(".nav-selector");
 
-inputBox.addEventListener("change", chatWithAI);
+document.querySelector("button").addEventListener("click", chatWithAI);
 
 let conversation = [];
 
