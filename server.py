@@ -1,11 +1,14 @@
 from flask import Flask, render_template, request, jsonify
+from dotenv import load_dotenv
 import openai, os
 
 app = Flask(__name__)
 
+load_dotenv()
+
 OPEN_API_KEY = os.getenv("API_KEY")
 
-client = openai.Client(api_key=OPEN_API_KEY)
+openai.api_key = OPEN_API_KEY
 
 @app.route("/")
 def index():
@@ -55,7 +58,7 @@ def chat():
     
 def send_convo_to_ai(conversation):
     try:
-        response = client.chat.completions.create(
+        response = openai.chat.completions.create(
             model = "gpt-4o",
             messages=conversation
         )
